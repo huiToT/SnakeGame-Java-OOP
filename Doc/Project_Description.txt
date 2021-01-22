@@ -1,26 +1,32 @@
 Games to consider (Not in order of precedence) 
-1) Tank game 
-2) Pummel Party 
-3) Bomberman
+1) Slither.io
 
 
-I. Project Description (Decide and state which game your team will be working on):
+I. Project Description 
+(Decide and state which game your team will be working on):
+
 Snake battle royale, 1v1 snake game. Each player is given 3 lives. In order to win, you need to have a higher high score. In order to earn points, players will need to collect items, or cause the opponent to die and lose points. There will be a time limit set on each game.
 
 
 II. Tool Name (Discuss and come up with a catchy name for your application.):
-Snake Game - 
-Snake party?
-Battle Snakes
-Snek Royale - this is good
 
-Tank gamePummel PartyBomber
-man
+Snek Royale
 
 
 III. MoSCoW Matrix
 Brainstorm on what features are critical for your project. Also discuss the properties that are good to have and would include if time permits.
 
-Must haveShould haveCould haveWould have
+Must have
+- Lives
+- Score board
+- Concurrent multiplayer system
+Should have
+
+- TimerCould have
+
+- Fruits with different points
+- Fruits with different effects
+- Obstacle on the mapWould have
+- Different variety of maps for players to choose
 https://en.wikipedia.org/wiki/MoSCoW_method
 
