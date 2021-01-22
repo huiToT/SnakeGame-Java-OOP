@@ -1,6 +1,7 @@
-Games to consider (Not in order of precedence)ï¿½
-1) Tank gameï¿½
-2) Pummel Partyï¿½
+Games to consider (Not in order of precedence) 
+1) Tank game 
+2) Pummel Party 
+3) Bomberman
 
 
 I. Project Description (Decide and state which game your team will be working on):
@@ -8,7 +9,7 @@ Snake battle royale, 1v1 snake game. Each player is given 3 lives. In order to w
 
 
 II. Tool Name (Discuss and come up with a catchy name for your application.):
-Snake Game -ï¿½
+Snake Game - 
 Snake party?
 Battle Snakes
 Snek Royale - this is good
