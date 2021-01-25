@@ -1,6 +1,29 @@
+# **Snek Royale game**
+### Project/Game Description
+A snake battle royale player vs player game. Each player will be given 3 lives as default. The player would need to collect items and cause the other player to die to win, points are awarded based on how many items are collected. 
 
 
-### Project set up steps:
+### MosCoW Matrix 
+1. **MUST HAVE**
+	- Lives for the players
+	- Score boards for the players
+	- Concurrent multiplayer system (multi-thread)??
+
+2. **SHOULD HAVE**
+	- Time Trial as a challenge 
+
+3. **COULD HAVE**
+	- Items that grants players special effects
+	- Items that give different points rather than fixed points
+	- Random Obstacles
+
+4. **WOULD HAVE**
+	- Different map for players to choose
+	- Multiple levels for the game
+
+-----------------------------------------------------------
+
+### **Project set up steps:**
 1. Clone project  
 ```git clone https://github.com/sgtechICT1009/ict1009-team35-2021.git```
 
