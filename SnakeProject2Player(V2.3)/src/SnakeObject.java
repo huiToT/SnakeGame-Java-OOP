@@ -1,11 +1,19 @@
+import javax.swing.*;
+
 class snakeObject extends controlClass{
+    private int playerNumber;
     private int life;
     private int lengthOfSnake;
     private int[] snakeXlength;
     private int[] snakeYlength;
     private int score;
 
-    public snakeObject(){
+    private ImageIcon mouth;
+    private ImageIcon body;
+
+
+    public snakeObject(int playerNumber){
+        this.playerNumber = playerNumber;
         life = 3;
         lengthOfSnake = 3;
         snakeXlength = new int[750];
@@ -118,6 +126,20 @@ class snakeObject extends controlClass{
             }
         }
 
+
+    }
+    public ImageIcon getMouth(){
+
+        if(playerNumber == 1){
+            mouth = new ImageIcon("rightmouth.png");
+        }
+        else{
+
+            mouth = new ImageIcon("rightmouthP2.png");
+
+        }
+
+        return mouth;
 
     }
 }

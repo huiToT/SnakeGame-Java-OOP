@@ -11,8 +11,8 @@ import javax.swing.Timer;
 public class Gameplay extends JPanel implements KeyListener, ActionListener{
 
     //main snakeObejct creation
-    snakeObject snake1 = new snakeObject();
-    snakeObject snake2 = new snakeObject();
+    snakeObject snake1 = new snakeObject(1);
+    snakeObject snake2 = new snakeObject(2);
 
     //main powerup creation
     powerup apple = new apple();
@@ -29,10 +29,8 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
     private ImageIcon muscleImage;
     private ImageIcon poisonImage;
 
-    private ImageIcon rightmouth;
-    private ImageIcon leftmouth;
-    private ImageIcon upmouth;
-    private ImageIcon downmouth;
+
+    private ImageIcon mouth;
 
 
     private Timer timer;
@@ -182,13 +180,15 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
 
 
         //create Snake 1
-        rightmouth = new ImageIcon("rightmouth.png");
-        rightmouth.paintIcon(this, g, snake1.getXYPosition("x",0), snake1.getXYPosition("y",0));
+        //mouth = new ImageIcon("rightmouth.png");
+        //mouth.paintIcon(this, g, snake1.getXYPosition("x",0), snake1.getXYPosition("y",0));
+        snake1.getMouth().paintIcon(this, g, snake1.getXYPosition("x",0), snake1.getXYPosition("y",0));
+
 
 
         //create Snake 2
-        leftmouth = new ImageIcon("leftmouthP2.png");
-        leftmouth.paintIcon(this, g, snake2.getXYPosition("x",0), snake2.getXYPosition("y",0));
+        mouth = new ImageIcon("leftmouthP2.png");
+        mouth.paintIcon(this, g, snake2.getXYPosition("x",0), snake2.getXYPosition("y",0));
 
 
         for(int x = 0; x < snake1.getSnakeLength(); x++) //animation for snake 1
@@ -212,30 +212,30 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 //when the position of the head is facing up
                 if (currentNodeY < nextNodeY){
 
-                    upmouth = new ImageIcon("upmouth.png");
-                    upmouth.paintIcon(this, g, currentNodeX, currentNodeY);
+                    mouth = new ImageIcon("upmouth.png");
+                    mouth.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
 
                 //when the position of the head is facing right
                 else if (currentNodeX > nextNodeX){
 
-                    rightmouth = new ImageIcon("rightmouth.png");
-                    rightmouth.paintIcon(this, g, currentNodeX, currentNodeY);
+                    mouth = new ImageIcon("rightmouth.png");
+                    mouth.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
                 //when the position of the head is facing down
                 else if (currentNodeY > nextNodeY){
 
-                    downmouth = new ImageIcon("downmouth.png");
-                    downmouth.paintIcon(this, g, currentNodeX, currentNodeY);
+                    mouth = new ImageIcon("downmouth.png");
+                    mouth.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
                 //when the position of the head is facing left
                 else if (currentNodeX < nextNodeX){
 
-                    leftmouth = new ImageIcon("leftmouth.png");
-                    leftmouth.paintIcon(this, g, currentNodeX, currentNodeY);
+                    mouth = new ImageIcon("leftmouth.png");
+                    mouth.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
 
@@ -344,26 +344,26 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
             //System.out.println("snake 2 animation running");
             if(a == 0 && snake2.getKeyTrueFalseValue("right") == 1)
             {
-                rightmouth = new ImageIcon("rightmouthP2.png");
-                rightmouth.paintIcon(this, g,snake2.getXYPosition("x", a),snake2.getXYPosition("y", a));
+                mouth = new ImageIcon("rightmouthP2.png");
+                mouth.paintIcon(this, g,snake2.getXYPosition("x", a),snake2.getXYPosition("y", a));
             }
 
             if(a == 0 && snake2.getKeyTrueFalseValue("left") == 1)
             {
-                leftmouth = new ImageIcon("leftmouthP2.png");
-                leftmouth.paintIcon(this, g, snake2.getXYPosition("x", a), snake2.getXYPosition("y", a));
+                mouth = new ImageIcon("leftmouthP2.png");
+                mouth.paintIcon(this, g, snake2.getXYPosition("x", a), snake2.getXYPosition("y", a));
             }
 
             if(a == 0 && snake2.getKeyTrueFalseValue("up") == 1)
             {
-                upmouth = new ImageIcon("upmouthP2.png");
-                upmouth.paintIcon(this, g, snake2.getXYPosition("x", a), snake2.getXYPosition("y", a));
+                mouth = new ImageIcon("upmouthP2.png");
+                mouth.paintIcon(this, g, snake2.getXYPosition("x", a), snake2.getXYPosition("y", a));
             }
 
             if(a == 0 && snake2.getKeyTrueFalseValue("down") == 1)
             {
-                downmouth = new ImageIcon("downmouthP2.png");
-                downmouth.paintIcon(this, g, snake2.getXYPosition("x", a), snake2.getXYPosition("y", a));
+                mouth = new ImageIcon("downmouthP2.png");
+                mouth.paintIcon(this, g, snake2.getXYPosition("x", a), snake2.getXYPosition("y", a));
             }
 
             if(a != 0)
