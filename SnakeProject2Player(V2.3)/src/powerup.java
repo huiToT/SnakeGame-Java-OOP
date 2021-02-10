@@ -98,10 +98,19 @@ class apple extends powerup{
     public void powerupEffect(snakeObject affectedSnake){
 
 
+
+        //this checks if the snake is eating the apple, and if it is ,length + 1
         if(eatPowerup(affectedSnake)){
 
+            //adds snake score
+            int tempScore = affectedSnake.getScore();
+            affectedSnake.setScore(tempScore + 1);
+
+            //adds snake length
             int tempLength = affectedSnake.getSnakeLength();
             affectedSnake.setSnakeLength(tempLength+1);
+
+            //sets new position of powerup
             setPos();
 
         }
@@ -112,7 +121,7 @@ class apple extends powerup{
 
 class muscle extends powerup{
 
-    void muscle(){
+    muscle(){
 
         setType("muscle");
         setPicName("muscle.png");
@@ -122,10 +131,19 @@ class muscle extends powerup{
     public void powerupEffect(snakeObject affectedSnake){
 
 
+
+        //this checks if the snake is eating the muscle, and if it is ,length + 2
         if(eatPowerup(affectedSnake)){
 
+            //adds snake score
+            int tempScore = affectedSnake.getScore();
+            affectedSnake.setScore(tempScore + 2);
+
+            //adds snake length
             int tempLength = affectedSnake.getSnakeLength();
             affectedSnake.setSnakeLength(tempLength+2);
+
+            //sets new position of powerup
             setPos();
 
         }
@@ -136,7 +154,7 @@ class muscle extends powerup{
 
 class poison extends powerup{
 
-    void poison(){
+    poison(){
 
         setType("poison");
         setPicName("poison.png");
@@ -145,15 +163,29 @@ class poison extends powerup{
     }
     public void powerupEffect(snakeObject affectedSnake){
 
-        System.out.println("checking if the apple is eaten");
+        //System.out.println("checking if the poison is eaten");
+
+
+        //this checks if the snake is eating the poison, and if it is and the length is > 3, length --,score will deduct regardless of length
         if(eatPowerup(affectedSnake)){
-            System.out.println("the snake ate the apple");
-            int tempLength = affectedSnake.getSnakeLength();
-            affectedSnake.setSnakeLength(tempLength-1);
+
+            //System.out.println("the snake ate the poison");
+
+            // if the snake length >3,deduct, else minus points
+            if(affectedSnake.getSnakeLength() > 3){
+
+                //deducts snake length
+                int tempLength = affectedSnake.getSnakeLength();
+                affectedSnake.setSnakeLength(tempLength-1);
+
+            }
+            // deduct snake score
+            int tempScore = affectedSnake.getScore();
+            affectedSnake.setScore(tempScore - 1);
+
+            //sets new location of powerup
             setPos();
-
         }
-
 
     }
 }

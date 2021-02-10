@@ -10,11 +10,18 @@ import javax.swing.Timer;
 
 public class Gameplay extends JPanel implements KeyListener, ActionListener{
 
-
+    //main snakeObejct creation
     snakeObject snake1 = new snakeObject();
     snakeObject snake2 = new snakeObject();
 
+    //main powerup creation
+    powerup apple = new apple();
+    powerup muscle = new muscle();
+    powerup poison = new poison();
+
     //controlClass controls = new controlClass();
+
+    //required graphics variable creation
     private ImageIcon Logo;
     private ImageIcon titleImage;
     private ImageIcon appleImage;
@@ -27,37 +34,6 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
     private ImageIcon upmouth;
     private ImageIcon downmouth;
 
-    private int[] appleXpos = {25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325,
-            350, 375, 400, 425, 450, 475, 500, 525, 550, 575, 600, 625, 650,
-            675, 700, 725, 750, 775, 800, 825, 850};
-    private int[] appleYpos = {75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350,
-            375, 400, 425, 450, 475, 500, 525, 550, 575, 600, 625};
-
-    private int[] muscleXpos = {25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325,
-            350, 375, 400, 425, 450, 475, 500, 525, 550, 575, 600, 625, 650,
-            675, 700, 725, 750, 775, 800, 825, 850};
-    private int[] muscleYpos = {75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350,
-            375, 400, 425, 450, 475, 500, 525, 550, 575, 600, 625};
-
-    private int[] poisonXpos = {25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325,
-            350, 375, 400, 425, 450, 475, 500, 525, 550, 575, 600, 625, 650,
-            675, 700, 725, 750, 775, 800, 825, 850};
-    private int[] poisonYpos = {75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350,
-            375, 400, 425, 450, 475, 500, 525, 550, 575, 600, 625};
-
-    private Random random = new Random();
-    private int xPos = random.nextInt(34);
-    private int yPos = random.nextInt(23);
-
-
-    private int x2Pos = random.nextInt(34);
-    private int y2Pos = random.nextInt(23);
-
-    private int x3Pos = random.nextInt(34);
-    private int y3Pos = random.nextInt(23);
-
-    private int score_1 = 0;
-    private int score_2 = 0;
 
     private Timer timer;
     private int delay = 100;
@@ -197,12 +173,12 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
         //draw scores
         g.setColor(Color.white);
         g.setFont(new Font("arial", Font.PLAIN, 14));
-        g.drawString("Score(P1): "+ score_1, 780, 30);
+        g.drawString("Score(P1): "+ snake1.getScore(), 780, 30);
 
         //draw length
         g.setColor(Color.white);
         g.setFont(new Font("arial", Font.PLAIN, 14));
-        g.drawString("Score(P2): "+ score_2, 780, 50);
+        g.drawString("Score(P2): "+ snake2.getScore(), 780, 50);
 
 
         //create Snake 1
@@ -400,77 +376,34 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
 
 
 
-        appleImage = new ImageIcon("apple.png");	//set animation for apple
-        appleImage.paintIcon(this, g, appleXpos[xPos], appleYpos[yPos]);
-
-        //creates the graphics for apple owerup,then gets the pic name and paints the graphics
+        //creates the graphics for apple powerup,then gets the pic name and paints the graphics
         appleImage = new ImageIcon(apple.getPicName());
         appleImage.paintIcon(this, g, apple.getPosX(), apple.getPosY());
 
-            //the logic to check for eaten powerup is in powerupEffect
-            apple.powerupEffect(snake1);
-            apple.powerupEffect(snake2);
+        //the logic to check for eaten powerup is in powerupEffect
+        apple.powerupEffect(snake1);
+        apple.powerupEffect(snake2);
 
-        //after eating the apple for snake 2
-        if (appleXpos[xPos] == snake2.getXYPosition("x",0) && appleYpos[yPos] == snake2.getXYPosition("y",0))
-        {
-            score_2++;
-            int tempLength = snake2.getSnakeLength()+1;
-            snake2.setSnakeLength(tempLength);
+        //creates the graphics for muscle powerup,then gets the pic name and paints the graphics
+        System.out.println("the name file for muscle is " + muscle.getPicName());
+        muscleImage = new ImageIcon(muscle.getPicName());	// set animation for muscle power up
+        muscleImage.paintIcon(this, g, muscle.getPosX(), muscle.getPosY());
 
-            xPos = random.nextInt(34);
-            yPos = random.nextInt(23);
-        }
+        //the logic to check for eaten powerup is in powerupEffect
+        muscle.powerupEffect(snake1);
+        muscle.powerupEffect(snake2);
 
-        muscleImage = new ImageIcon("muscle.png");	// set animation for muscle power up
-        muscleImage.paintIcon(this, g, muscleXpos[x2Pos], muscleYpos[y2Pos]);
 
-        //after eating the muscle power up for snake 1
-        if (muscleXpos[x2Pos] == snake1.getXYPosition("x",0) && muscleYpos[y2Pos] == snake1.getXYPosition("y",0))
-        {
-            score_1 += 2;
-            int tempLength = snake1.getSnakeLength() + 2;
-            snake1.setSnakeLength(tempLength);
-            x2Pos = random.nextInt(34);
-            y2Pos = random.nextInt(23);
-        }
+        //creates the graphics for muscle powerup,then gets the pic name and paints the graphics
+        poisonImage = new ImageIcon(poison.getPicName());	// set animation for poison power up
+        poisonImage.paintIcon(this, g, poison.getPosX(), poison.getPosY());
 
-        //after eating the muscle power up for snake 2
-        if (muscleXpos[x2Pos] == snake2.getXYPosition("x",0) && muscleYpos[y2Pos] == snake2.getXYPosition("y",0))
-        {
-            score_2 += 2;
-            int tempLength = snake2.getSnakeLength() + 2;
-            snake2.setSnakeLength(tempLength);
-            x2Pos = random.nextInt(34);
-            y2Pos = random.nextInt(23);
-        }
+        //the logic to check for eaten powerup is in powerupEffect
+        poison.powerupEffect(snake1);
+        poison.powerupEffect(snake2);
 
-        poisonImage = new ImageIcon("poison.png");	// set animation for poison power up
-        poisonImage.paintIcon(this, g, poisonXpos[x3Pos], poisonYpos[y3Pos]);
 
-        //after eating the poison power up for snake 1
-        if (poisonXpos[x3Pos] == snake1.getXYPosition("x",0) && poisonYpos[y3Pos] == snake1.getXYPosition("y",0))
-        {
-            if (snake2.getSnakeLength() > 1) {
-                int tempLength = snake2.getSnakeLength() - 1;
-                snake2.setSnakeLength(tempLength);
-            }
-            score_2 -= 1;
-            x3Pos = random.nextInt(30);
-            y3Pos = random.nextInt(22);
-        }
 
-        //after eating the poison power up for snake 2
-        if (poisonXpos[x3Pos] == snake2.getXYPosition("x",0) && poisonYpos[y3Pos] == snake2.getXYPosition("y",0))
-        {
-            if (snake1.getSnakeLength() > 1) {
-                int tempLength = snake1.getSnakeLength() - 1;
-                snake1.setSnakeLength(tempLength);
-            }
-            score_1 -= 1;
-            x3Pos = random.nextInt(30);
-            y3Pos = random.nextInt(22);
-        }
 
         //snake 1 lose condition
         for (int b = 1; b < snake1.getSnakeLength(); b++)
@@ -900,13 +833,13 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
             //controls.setMove(0);
             //controls.setAllowInput(1);
 
-            score_1 = 0;
+            snake1.setScore(0);
             snake1.setSnakeLength(3);
 
             snake1.setMove(0);
             snake1.setAllowInput(1);
 
-            score_2 = 0;
+            snake2.setScore(0);
             snake2.setSnakeLength(3);
 
             snake2.setMove(0);

@@ -3,12 +3,14 @@ class snakeObject extends controlClass{
     private int lengthOfSnake;
     private int[] snakeXlength;
     private int[] snakeYlength;
+    private int score;
 
     public snakeObject(){
         life = 3;
         lengthOfSnake = 3;
         snakeXlength = new int[750];
         snakeYlength = new int[750];
+        score = 0;
 
 
 
@@ -41,6 +43,23 @@ class snakeObject extends controlClass{
     public int[] getSnakeArrayY() {
 
         return snakeYlength;
+
+    }
+    public int getScore(){
+
+        return score;
+    }
+    public void setScore(int newScore){
+
+
+        if(0 > newScore) // checks for negative score, if it is negative, set to 0 instead
+        {
+            score =0;
+        }
+        else{
+            score = newScore;
+        }
+
 
     }
 
