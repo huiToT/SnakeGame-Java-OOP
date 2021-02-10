@@ -403,16 +403,13 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
         appleImage = new ImageIcon("apple.png");	//set animation for apple
         appleImage.paintIcon(this, g, appleXpos[xPos], appleYpos[yPos]);
 
-        //after eating the apple for snake 1
-        if (appleXpos[xPos] == snake1.getXYPosition("x",0) && appleYpos[yPos] == snake1.getXYPosition("y",0))
-        {
-            score_1++;
-            int tempLength = snake1.getSnakeLength()+1;
-            snake1.setSnakeLength(tempLength);
+        //creates the graphics for apple owerup,then gets the pic name and paints the graphics
+        appleImage = new ImageIcon(apple.getPicName());
+        appleImage.paintIcon(this, g, apple.getPosX(), apple.getPosY());
 
-            xPos = random.nextInt(34);
-            yPos = random.nextInt(23);
-        }
+            //the logic to check for eaten powerup is in powerupEffect
+            apple.powerupEffect(snake1);
+            apple.powerupEffect(snake2);
 
         //after eating the apple for snake 2
         if (appleXpos[xPos] == snake2.getXYPosition("x",0) && appleYpos[yPos] == snake2.getXYPosition("y",0))
