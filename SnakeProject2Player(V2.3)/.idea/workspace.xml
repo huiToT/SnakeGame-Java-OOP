@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="993d1a48-0c3b-4fe4-8525-04428a3309f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Older versions/SnakeProject2Player(v1)/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Older versions/SnakeProject2Player(v1)/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Older versions/SnakeProject2Player(v1)/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Older versions/SnakeProject2Player(v1)/apple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Older versions/SnakeProject2Player(v1)/bin/Gameplay.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Older versions/SnakeProject2Player(v1)/bin/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Older versions/SnakeProject2Player(v1)/downmouth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Older versions/SnakeProject2Player(v1)/leftmouth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Older versions/SnakeProject2Player(v1)/rightmouth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Older versions/SnakeProject2Player(v1)/snakeimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Older versions/SnakeProject2Player(v1)/snaketitle.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Older versions/SnakeProject2Player(v1)/src/Gameplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Older versions/SnakeProject2Player(v1)/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Older versions/SnakeProject2Player(v1)/upmouth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/SnakeProject2Player.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/apple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/bin/Gameplay.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/bin/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/bin/controlClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/bin/gameBoardUI.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/bin/gameStart.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/bin/snakeObject.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/downmouth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/downmouthP2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/leftmouth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/leftmouthP2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/muscle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/poison.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/rightmouth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/rightmouthP2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/snakeimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/snakeimageP2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/snaketitle.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/src/Gameplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/upmouth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2)/upmouthP2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/Logo.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/SnakeProject2Player(V2).iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/apple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/bitmap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/downmouth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/downmouthP2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/leftmouth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/leftmouthP2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/muscle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/out/production/SnakeProject2Player(V2)/Gameplay$MouseEvents.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/out/production/SnakeProject2Player(V2)/Gameplay.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/out/production/SnakeProject2Player(V2)/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/out/production/SnakeProject2Player(V2)/controlClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/out/production/SnakeProject2Player(V2)/gameBoardUI.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/out/production/SnakeProject2Player(V2)/snakeObject.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/poison.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/rightmouth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/rightmouthP2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snakeimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snakeimageLR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snakeimageLR1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snakeimageP2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snakeimageUD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snakeimageUD1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snaketaildown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snaketaildown1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snaketailleft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snaketailleft1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snaketailright.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snaketailright1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snaketailup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snaketailup1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snaketitle.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snaketurnDownLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snaketurnDownRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snaketurnUpLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snaketurnUpRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/snaketurnUpRight1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/src/ControlClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/src/Gameplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/src/SnakeObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/src/gamBoardUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/upmouth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SnakeProject2Player(V2.2)/upmouthP2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/SnakeProject2Player(V2).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/apple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/bitmap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/downmouth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/downmouthP2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/leftmouth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/leftmouthP2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/muscle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/out/production/SnakeProject2Player(V2)/Gameplay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/out/production/SnakeProject2Player(V2)/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/out/production/SnakeProject2Player(V2)/controlClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/out/production/SnakeProject2Player(V2)/gameBoardUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/out/production/SnakeProject2Player(V2)/snakeObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/poison.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/rightmouth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/rightmouthP2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snakeimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snakeimageLR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snakeimageLR1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snakeimageP2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snakeimageUD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snakeimageUD1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snaketaildown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snaketaildown1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snaketailleft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snaketailleft1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snaketailright.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snaketailright1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snaketailup.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snaketailup1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snaketitle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snaketurnDownLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snaketurnDownRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snaketurnUpLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snaketurnUpRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/snaketurnUpRight1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/src/ControlClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/src/Gameplay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/src/SnakeObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/src/gamBoardUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/upmouth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(V2.1)/upmouthP2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logo.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SnakeProject2Player(V2).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitmap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/downmouth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/downmouthP2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leftmouth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leftmouthP2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/muscle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SnakeProject2Player(V2)/Gameplay$MouseEvents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SnakeProject2Player(V2)/Gameplay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SnakeProject2Player(V2)/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SnakeProject2Player(V2)/apple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SnakeProject2Player(V2)/controlClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SnakeProject2Player(V2)/gameBoardUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SnakeProject2Player(V2)/muscle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SnakeProject2Player(V2)/poison.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SnakeProject2Player(V2)/powerup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SnakeProject2Player(V2)/snakeObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/poison.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rightmouth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rightmouthP2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakeimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakeimageLR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakeimageLR1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakeimageP2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakeimageUD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakeimageUD1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snaketaildown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snaketaildown1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snaketailleft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snaketailleft1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snaketailright.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snaketailright1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snaketailup.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snaketailup1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snaketitle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snaketurnDownLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snaketurnDownRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snaketurnUpLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snaketurnUpRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snaketurnUpRight1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ControlClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gameplay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamBoardUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/powerup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upmouth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upmouthP2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(v1)/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(v1)/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(v1)/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(v1)/apple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(v1)/bin/Gameplay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(v1)/bin/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(v1)/downmouth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(v1)/leftmouth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(v1)/rightmouth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(v1)/snakeimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(v1)/snaketitle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(v1)/src/Gameplay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(v1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SnakeProject2Player(v1)/upmouth.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1oHMN7bzJJ8AwJZJwuWQiUlWBf5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="SnakeProject2Player(V2)" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="993d1a48-0c3b-4fe4-8525-04428a3309f8" name="Default Changelist" comment="" />
+      <created>1612939020609</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612939020609</updated>
+      <workItem from="1612939021970" duration="523000" />
+      <workItem from="1612939663538" duration="476000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
