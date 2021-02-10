@@ -206,8 +206,8 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
         mouth = new ImageIcon("leftmouthP2.png");
         mouth.paintIcon(this, g, snake2.getXYPosition("x",0), snake2.getXYPosition("y",0));
 
-
-        for(int x = 0; x < snake1.getSnakeLength(); x++) //animation for snake 1
+        //animation for snake 1
+        for(int x = 0; x < snake1.getSnakeLength(); x++)
         {
             //System.out.println("snake 1 animation running");
 
@@ -223,8 +223,9 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 int nextNodeX = snake1.getXYPosition("x",x+1);
                 int nextNodeY = snake1.getXYPosition("y",x+1);
 
-                System.out.println("snake head current x position " + currentNodeX + " snake head current Y position " + currentNodeY);
-                System.out.println("snake head next x position " + nextNodeX + " snake head next Y position " + nextNodeY);
+                //System.out.println("snake head current x position " + currentNodeX + " snake head current Y position " + currentNodeY);
+                //System.out.println("snake head next x position " + nextNodeX + " snake head next Y position " + nextNodeY);
+
                 //when the position of the head is facing up
                 if (currentNodeY < nextNodeY){
 
@@ -262,6 +263,8 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 int previousNodeX = snake1.getXYPosition("x",x - 1);
                 int previousNodeY = snake1.getXYPosition("y",x - 1);
 
+                //System.out.println("snake current tail value Y is " + currentNodeY + " snake previous tail value Y is " + previousNodeY + " X in loop is " + x);
+
                 //if tail facing up
                 if (previousNodeY < currentNodeY){
 
@@ -278,8 +281,9 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 }
 
                 //if facing down
-                else if (previousNodeY < currentNodeY){
+                else if (previousNodeY > currentNodeY){
 
+                    System.out.println("facing down now");
                     snakeimage = new ImageIcon("snaketaildown.png");
                     snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
 
@@ -335,7 +339,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
 
                 }
 
-                // upward left turn
+                // downward right turn
                 else if (previousNodeX > currentNodeX && nextNodeY < currentNodeY || nextNodeX > currentNodeX && previousNodeY < currentNodeY){
 
                     snakeimage = new ImageIcon("snaketurnDownRight.png");
@@ -354,152 +358,152 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
             }
         }
 
-        //animations for snake 2
-            for(int x = 0; x < snake2.getSnakeLength(); x++) //animation for snake 1
-            {
-                //System.out.println("snake 2 animation running");
+        //animation for snake 2
+        for(int a = 0; a < snake2.getSnakeLength(); a++) {
+            //System.out.println("snake 1 animation running");
 
 
-                int currentNodeX = snake2.getXYPosition("x",x);
-                int currentNodeY = snake2.getXYPosition("y",x);
+            int currentNodeX = snake2.getXYPosition("x",a);
+            int currentNodeY = snake2.getXYPosition("y",a);
 
-                //System.out.println("snake current x position " + currentNodeX + " snake current Y position " + currentNodeY);
+            //System.out.println("snake current x position " + currentNodeX + " snake current Y position " + currentNodeY);
 
-                // if the node is the head of the snake
-                if (x == 0){
+            // if the node is the head of the snake
+            if (a == 0){
 
-                    int nextNodeX = snake2.getXYPosition("x",x+1);
-                    int nextNodeY = snake2.getXYPosition("y",x+1);
-                    System.out.println("snake head current x position " + currentNodeX + " snake head current Y position " + currentNodeY);
-                    System.out.println("snake head next x position " + nextNodeX + " snake head next Y position " + nextNodeY);
-                    //when the position of the head is facing up
-                    if (currentNodeY < nextNodeY){
+                int nextNodeX = snake2.getXYPosition("x",a + 1);
+                int nextNodeY = snake2.getXYPosition("y",a + 1);
 
-                        mouth = new ImageIcon("upmouthP2.png");
-                        mouth.paintIcon(this, g, currentNodeX, currentNodeY);
+                //System.out.println("snake head current x position " + currentNodeX + " snake head current Y position " + currentNodeY);
+                //System.out.println("snake head next x position " + nextNodeX + " snake head next Y position " + nextNodeY);
+                //when the position of the head is facing up
+                if (currentNodeY < nextNodeY){
 
-                    }
-
-                    //when the position of the head is facing right
-                    else if (currentNodeX > nextNodeX){
-
-                        mouth = new ImageIcon("rightmouthP2.png");
-                        mouth.paintIcon(this, g, currentNodeX, currentNodeY);
-
-                    }
-                    //when the position of the head is facing down
-                    else if (currentNodeY > nextNodeY){
-
-                        mouth = new ImageIcon("downmouthP2.png");
-                        mouth.paintIcon(this, g, currentNodeX, currentNodeY);
-
-                    }
-                    //when the position of the head is facing left
-                    else if (currentNodeX < nextNodeX){
-
-                        mouth = new ImageIcon("leftmouthP2.png");
-                        mouth.paintIcon(this, g, currentNodeX, currentNodeY);
-
-                    }
+                    mouth = new ImageIcon("upmouthP2.png");
+                    mouth.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
-                // if the node is the tail of the snake
-                else if (x == snake2.getSnakeLength() - 1){
 
-                    int previousNodeX = snake2.getXYPosition("x",x - 1);
-                    int previousNodeY = snake2.getXYPosition("y",x - 1);
+                //when the position of the head is facing right
+                else if (currentNodeX > nextNodeX){
 
-                    //if tail facing up
-                    if (previousNodeY < currentNodeY){
-
-                        snakeimage = new ImageIcon("snaketailupP2.png");
-                        snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
-
-                    }
-                    //if tail facing right
-                    else if (previousNodeX > currentNodeX){
-
-                        snakeimage = new ImageIcon("snaketailrightP2.png");
-                        snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
-
-                    }
-
-                    //if facing down
-                    else if (previousNodeY < currentNodeY){
-
-                        snakeimage = new ImageIcon("snaketaildownP2.png");
-                        snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
-
-                    }
-
-                    //if facing left
-                    else if (previousNodeX < currentNodeX){
-
-                        snakeimage = new ImageIcon("snaketailleftP2.png");
-                        snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
-
-                    }
-
+                    mouth = new ImageIcon("rightmouthP2.png");
+                    mouth.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
-                //if the node is not a head or tail
-                else {
+                //when the position of the head is facing down
+                else if (currentNodeY > nextNodeY){
 
-                    int previousNodeX = snake2.getXYPosition("x",x - 1);
-                    int previousNodeY = snake2.getXYPosition("y",x - 1);
-
-                    int nextNodeX = snake2.getXYPosition("x",x+1);
-                    int nextNodeY = snake2.getXYPosition("y",x+1);
-
-                    //if going from left to right or right to left
-                    if (previousNodeX < currentNodeX && nextNodeX > currentNodeX || nextNodeX < currentNodeX && previousNodeX > currentNodeX){
-
-                        snakeimage = new ImageIcon("snakeimageLRP2.png");
-                        snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
-                    }
-
-                    // if going up down
-                    else if (previousNodeY < currentNodeY && nextNodeY > currentNodeY || nextNodeY < currentNodeY && previousNodeY > currentNodeY){
-
-                        snakeimage = new ImageIcon("snakeimageUDP2.png");
-                        snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
-
-                    }
-
-                    // upwards left turn
-                    else if (previousNodeX < currentNodeX && nextNodeY > currentNodeY || nextNodeX < currentNodeX && previousNodeY > currentNodeY){
-
-                        snakeimage = new ImageIcon("snaketurnUpLeftP2.png");
-                        snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
-
-                    }
-
-                    // downwards left turn
-                    else if (previousNodeY < currentNodeY && nextNodeX < currentNodeX || nextNodeY < currentNodeY && previousNodeX < currentNodeX){
-
-                        snakeimage = new ImageIcon("snaketurnDownLeftP2.png");
-                        snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
-
-                    }
-
-                    // upward left turn
-                    else if (previousNodeX > currentNodeX && nextNodeY < currentNodeY || nextNodeX > currentNodeX && previousNodeY < currentNodeY){
-
-                        snakeimage = new ImageIcon("snaketurnDownRightP2.png");
-                        snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
-
-                    }
-
-                    // upward right turn
-                    else if (previousNodeY > currentNodeY && nextNodeX > currentNodeX || nextNodeY > currentNodeY && previousNodeX > currentNodeX){
-
-                        snakeimage = new ImageIcon("snaketurnUpRightP2.png");
-                        snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
-
-                    }
+                    mouth = new ImageIcon("downmouthP2.png");
+                    mouth.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
+                //when the position of the head is facing left
+                else if (currentNodeX < nextNodeX){
+
+                    mouth = new ImageIcon("leftmouthP2.png");
+                    mouth.paintIcon(this, g, currentNodeX, currentNodeY);
+
+                }
+
             }
+            // if the node is the tail of the snake
+            else if (a == snake2.getSnakeLength() - 1){
+
+                int previousNodeX = snake2.getXYPosition("x",a - 1);
+                int previousNodeY = snake2.getXYPosition("y",a - 1);
+
+                //if tail facing up
+                if (previousNodeY < currentNodeY){
+
+                    snakeimage = new ImageIcon("snaketailupP2.png");
+                    snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
+
+                }
+                //if tail facing right
+                else if (previousNodeX > currentNodeX){
+
+                    snakeimage = new ImageIcon("snaketailrightP2.png");
+                    snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
+
+                }
+
+                //if facing down
+                else if (previousNodeY > currentNodeY){
+
+                    snakeimage = new ImageIcon("snaketaildownP2.png");
+                    snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
+
+                }
+
+                //if facing left
+                else if (previousNodeX < currentNodeX){
+
+                    snakeimage = new ImageIcon("snaketailleftP2.png");
+                    snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
+
+                }
+
+
+            }
+            //if the node is not a head or tail
+            else {
+
+                int previousNodeX = snake2.getXYPosition("x",a - 1);
+                int previousNodeY = snake2.getXYPosition("y",a - 1);
+
+                int nextNodeX = snake2.getXYPosition("x",a + 1);
+                int nextNodeY = snake2.getXYPosition("y",a + 1);
+
+                //if going from left to right or right to left
+                if (previousNodeX < currentNodeX && nextNodeX > currentNodeX || nextNodeX < currentNodeX && previousNodeX > currentNodeX){
+
+                    snakeimage = new ImageIcon("snakeimageLRP2.png");
+                    snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
+                }
+
+                // if going up down
+                else if (previousNodeY < currentNodeY && nextNodeY > currentNodeY || nextNodeY < currentNodeY && previousNodeY > currentNodeY){
+
+                    snakeimage = new ImageIcon("snakeimageUDP2.png");
+                    snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
+
+                }
+
+                // upwards left turn
+                else if (previousNodeX < currentNodeX && nextNodeY > currentNodeY || nextNodeX < currentNodeX && previousNodeY > currentNodeY){
+
+                    snakeimage = new ImageIcon("snaketurnUpLeftP2.png");
+                    snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
+
+                }
+
+                // downwards left turn
+                else if (previousNodeY < currentNodeY && nextNodeX < currentNodeX || nextNodeY < currentNodeY && previousNodeX < currentNodeX){
+
+                    snakeimage = new ImageIcon("snaketurnDownLeftP2.png");
+                    snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
+
+                }
+
+                // downward right turn
+                else if (previousNodeX > currentNodeX && nextNodeY < currentNodeY || nextNodeX > currentNodeX && previousNodeY < currentNodeY){
+
+                    snakeimage = new ImageIcon("snaketurnDownRightP2.png");
+                    snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
+
+                }
+
+                // upward right turn
+                else if (previousNodeY > currentNodeY && nextNodeX > currentNodeX || nextNodeY > currentNodeY && previousNodeX > currentNodeX){
+
+                    snakeimage = new ImageIcon("snaketurnUpRightP2.png");
+                    snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
+
+                }
+
+            }
+        }
 
 
 
