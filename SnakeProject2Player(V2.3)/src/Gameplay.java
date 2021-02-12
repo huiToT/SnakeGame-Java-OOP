@@ -36,6 +36,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
     private int delay = 100;
     private int gameState = 0;
     private boolean StartHovered = false;
+    private boolean fPStartHovered = false;
     private boolean ExitHovered = false;
     private boolean ScoreboardHovered = false;
 
@@ -48,11 +49,18 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
 
 		if (gameState == 0) {
 			// Start button hover.
-			if (mouseX > 340 && mouseX < 540 && mouseY > 270 && mouseY < 325) {
+			if (mouseX > 200 && mouseX < 400 && mouseY > 270 && mouseY < 325) {
                 StartHovered = true;
 			} else {
                 StartHovered = false;
 			}
+
+			// 4P Start button hover.
+            if (mouseX > 480 && mouseX < 680 && mouseY > 270 && mouseY < 325) {
+                fPStartHovered = true;
+            } else {
+                fPStartHovered = false;
+            }
 
 			// Exit button hover.
 			if (mouseX > 340 && mouseX < 540 && mouseY > 350 && mouseY < 405) {
@@ -66,8 +74,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
             } else {
                 ScoreboardHovered = false;
             }
-		}
-    }
+		} }
 
         @Override
         public void mousePressed(MouseEvent e) {
@@ -76,8 +83,11 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
 
             //Check if button start is click
             if (gameState == 0) {
-                if (mouseX > 340 && mouseX < 540 && mouseY > 270 && mouseY < 325) {
+                if (mouseX > 200 && mouseX < 400 && mouseY > 270 && mouseY < 325) {
                     gameState = 1;
+                }
+                if (mouseX > 480 && mouseX < 680 && mouseY > 270 && mouseY < 325) {
+                    gameState = 4;
                 }
             }
 
@@ -111,7 +121,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
         snake1.setKeyTrueFalseValue("d", 1);
         snake2.setKeyTrueFalseValue("left", 1);
 
-        mainMenuTitleImage = new ImageIcon("Logo.png").getImage();
+        mainMenuTitleImage = new ImageIcon("./img/Logo.png").getImage();
 
     }
 
@@ -127,7 +137,8 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
             g.drawImage(mainMenuTitleImage, 130, 50, null);
             setBackground(Color.GREEN);
 
-            g.setFont(new Font("arial", Font.PLAIN, 30));;
+            g.setFont(new Font("arial", Font.PLAIN, 30));
+
             //Button and label for Start
             if (StartHovered == true){
                 g.setColor(new Color(131, 131, 225));
@@ -135,8 +146,21 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
             else{
                 g.setColor(new Color(56, 14, 112));
             }
-            g.drawRect(340, 270, 200, 55);
-            g.drawString("Start", 405, 310);
+            g.drawRect(200, 270, 200, 55);
+            g.drawString("2P Start", 240, 310);
+
+
+            // setting a four player option
+            if (fPStartHovered == true){
+                g.setColor(new Color(131, 131, 225));
+            }
+            else{
+                g.setColor(new Color(56, 14, 112));
+            }
+            g.drawRect(480, 270, 200, 55);
+            g.drawString("4P Start", 520, 310);
+
+
             //Button and label for Exit
             if (ExitHovered == true){
                 g.setColor(new Color(131, 131, 225));
@@ -173,7 +197,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
         g.drawRect(24, 10, 851, 55);
 
         //draw title image
-        titleImage = new ImageIcon("bitmap.png");
+        titleImage = new ImageIcon("./img/bitmap.png");
         titleImage.paintIcon(this, g, 25, 11);
 
         //draw border for gameplay
@@ -203,7 +227,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
 
 
         //create Snake 2
-        mouth = new ImageIcon("leftmouthP2.png");
+        mouth = new ImageIcon("./img/leftmouthP2.png");
         mouth.paintIcon(this, g, snake2.getXYPosition("x",0), snake2.getXYPosition("y",0));
 
         //animation for snake 1
@@ -229,7 +253,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 //when the position of the head is facing up
                 if (currentNodeY < nextNodeY){
 
-                    mouth = new ImageIcon("upmouth.png");
+                    mouth = new ImageIcon("./img/upmouth.png");
                     mouth.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
@@ -237,21 +261,21 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 //when the position of the head is facing right
                 else if (currentNodeX > nextNodeX){
 
-                    mouth = new ImageIcon("rightmouth.png");
+                    mouth = new ImageIcon("./img/rightmouth.png");
                     mouth.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
                 //when the position of the head is facing down
                 else if (currentNodeY > nextNodeY){
 
-                    mouth = new ImageIcon("downmouth.png");
+                    mouth = new ImageIcon("./img/downmouth.png");
                     mouth.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
                 //when the position of the head is facing left
                 else if (currentNodeX < nextNodeX){
 
-                    mouth = new ImageIcon("leftmouth.png");
+                    mouth = new ImageIcon("./img/leftmouth.png");
                     mouth.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
@@ -268,14 +292,14 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 //if tail facing up
                 if (previousNodeY < currentNodeY){
 
-                    snakeimage = new ImageIcon("snaketailup.png");
+                    snakeimage = new ImageIcon("./img/snaketailup.png");
                     snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
                 //if tail facing right
                 else if (previousNodeX > currentNodeX){
 
-                    snakeimage = new ImageIcon("snaketailright.png");
+                    snakeimage = new ImageIcon("./img/snaketailright.png");
                     snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
@@ -284,7 +308,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 else if (previousNodeY > currentNodeY){
 
                     System.out.println("facing down now");
-                    snakeimage = new ImageIcon("snaketaildown.png");
+                    snakeimage = new ImageIcon("./img/snaketaildown.png");
                     snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
@@ -292,7 +316,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 //if facing left
                 else if (previousNodeX < currentNodeX){
 
-                    snakeimage = new ImageIcon("snaketailleft.png");
+                    snakeimage = new ImageIcon("./img/snaketailleft.png");
                     snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
@@ -311,14 +335,14 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 //if going from left to right or right to left
                 if (previousNodeX < currentNodeX && nextNodeX > currentNodeX || nextNodeX < currentNodeX && previousNodeX > currentNodeX){
 
-                    snakeimage = new ImageIcon("snakeimageLR.png");
+                    snakeimage = new ImageIcon("./img/snakeimageLR.png");
                     snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
                 }
 
                 // if going up down
                 else if (previousNodeY < currentNodeY && nextNodeY > currentNodeY || nextNodeY < currentNodeY && previousNodeY > currentNodeY){
 
-                    snakeimage = new ImageIcon("snakeimageUD.png");
+                    snakeimage = new ImageIcon("./img/snakeimageUD.png");
                     snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
 
                 }
@@ -326,7 +350,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 // upwards left turn
                 else if (previousNodeX < currentNodeX && nextNodeY > currentNodeY || nextNodeX < currentNodeX && previousNodeY > currentNodeY){
 
-                    snakeimage = new ImageIcon("snaketurnUpLeft.png");
+                    snakeimage = new ImageIcon("./img/snaketurnUpLeft.png");
                     snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
 
                 }
@@ -334,7 +358,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 // downwards left turn
                 else if (previousNodeY < currentNodeY && nextNodeX < currentNodeX || nextNodeY < currentNodeY && previousNodeX < currentNodeX){
 
-                    snakeimage = new ImageIcon("snaketurnDownLeft.png");
+                    snakeimage = new ImageIcon("./img/snaketurnDownLeft.png");
                     snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
 
                 }
@@ -342,7 +366,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 // downward right turn
                 else if (previousNodeX > currentNodeX && nextNodeY < currentNodeY || nextNodeX > currentNodeX && previousNodeY < currentNodeY){
 
-                    snakeimage = new ImageIcon("snaketurnDownRight.png");
+                    snakeimage = new ImageIcon("./img/snaketurnDownRight.png");
                     snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
 
                 }
@@ -350,7 +374,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 // upward right turn
                 else if (previousNodeY > currentNodeY && nextNodeX > currentNodeX || nextNodeY > currentNodeY && previousNodeX > currentNodeX){
 
-                    snakeimage = new ImageIcon("snaketurnUpRight.png");
+                    snakeimage = new ImageIcon("./img/snaketurnUpRight.png");
                     snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
 
                 }
@@ -379,7 +403,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 //when the position of the head is facing up
                 if (currentNodeY < nextNodeY){
 
-                    mouth = new ImageIcon("upmouthP2.png");
+                    mouth = new ImageIcon("./img/upmouthP2.png");
                     mouth.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
@@ -387,7 +411,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 //when the position of the head is facing right
                 else if (currentNodeX > nextNodeX){
 
-                    mouth = new ImageIcon("rightmouthP2.png");
+                    mouth = new ImageIcon("./img/rightmouthP2.png");
                     mouth.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
@@ -401,7 +425,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 //when the position of the head is facing left
                 else if (currentNodeX < nextNodeX){
 
-                    mouth = new ImageIcon("leftmouthP2.png");
+                    mouth = new ImageIcon("./img/leftmouthP2.png");
                     mouth.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
@@ -416,14 +440,14 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 //if tail facing up
                 if (previousNodeY < currentNodeY){
 
-                    snakeimage = new ImageIcon("snaketailupP2.png");
+                    snakeimage = new ImageIcon("./img/snaketailupP2.png");
                     snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
                 //if tail facing right
                 else if (previousNodeX > currentNodeX){
 
-                    snakeimage = new ImageIcon("snaketailrightP2.png");
+                    snakeimage = new ImageIcon("./img/snaketailrightP2.png");
                     snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
@@ -431,7 +455,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 //if facing down
                 else if (previousNodeY > currentNodeY){
 
-                    snakeimage = new ImageIcon("snaketaildownP2.png");
+                    snakeimage = new ImageIcon("./img/snaketaildownP2.png");
                     snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
@@ -439,7 +463,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 //if facing left
                 else if (previousNodeX < currentNodeX){
 
-                    snakeimage = new ImageIcon("snaketailleftP2.png");
+                    snakeimage = new ImageIcon("./img/snaketailleftP2.png");
                     snakeimage.paintIcon(this, g, currentNodeX, currentNodeY);
 
                 }
@@ -458,14 +482,14 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 //if going from left to right or right to left
                 if (previousNodeX < currentNodeX && nextNodeX > currentNodeX || nextNodeX < currentNodeX && previousNodeX > currentNodeX){
 
-                    snakeimage = new ImageIcon("snakeimageLRP2.png");
+                    snakeimage = new ImageIcon("./img/snakeimageLRP2.png");
                     snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
                 }
 
                 // if going up down
                 else if (previousNodeY < currentNodeY && nextNodeY > currentNodeY || nextNodeY < currentNodeY && previousNodeY > currentNodeY){
 
-                    snakeimage = new ImageIcon("snakeimageUDP2.png");
+                    snakeimage = new ImageIcon("./img/snakeimageUDP2.png");
                     snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
 
                 }
@@ -473,7 +497,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 // upwards left turn
                 else if (previousNodeX < currentNodeX && nextNodeY > currentNodeY || nextNodeX < currentNodeX && previousNodeY > currentNodeY){
 
-                    snakeimage = new ImageIcon("snaketurnUpLeftP2.png");
+                    snakeimage = new ImageIcon("./img/snaketurnUpLeftP2.png");
                     snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
 
                 }
@@ -481,7 +505,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 // downwards left turn
                 else if (previousNodeY < currentNodeY && nextNodeX < currentNodeX || nextNodeY < currentNodeY && previousNodeX < currentNodeX){
 
-                    snakeimage = new ImageIcon("snaketurnDownLeftP2.png");
+                    snakeimage = new ImageIcon("./img/snaketurnDownLeftP2.png");
                     snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
 
                 }
@@ -489,7 +513,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 // downward right turn
                 else if (previousNodeX > currentNodeX && nextNodeY < currentNodeY || nextNodeX > currentNodeX && previousNodeY < currentNodeY){
 
-                    snakeimage = new ImageIcon("snaketurnDownRightP2.png");
+                    snakeimage = new ImageIcon("./img/snaketurnDownRightP2.png");
                     snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
 
                 }
@@ -497,7 +521,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 // upward right turn
                 else if (previousNodeY > currentNodeY && nextNodeX > currentNodeX || nextNodeY > currentNodeY && previousNodeX > currentNodeX){
 
-                    snakeimage = new ImageIcon("snaketurnUpRightP2.png");
+                    snakeimage = new ImageIcon("./img/snaketurnUpRightP2.png");
                     snakeimage.paintIcon(this,g,currentNodeX,currentNodeY);
 
                 }

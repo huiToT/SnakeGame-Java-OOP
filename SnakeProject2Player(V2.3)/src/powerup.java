@@ -91,7 +91,7 @@ class apple extends powerup{
     apple(){
 
         setType("apple");
-        setPicName("apple.png");
+        setPicName("./img/apple.png");
 
 
     }
@@ -124,7 +124,7 @@ class muscle extends powerup{
     muscle(){
 
         setType("muscle");
-        setPicName("muscle.png");
+        setPicName("./img/muscle.png");
 
 
     }
@@ -157,7 +157,7 @@ class poison extends powerup{
     poison(){
 
         setType("poison");
-        setPicName("poison.png");
+        setPicName("./img/poison.png");
 
 
     }
