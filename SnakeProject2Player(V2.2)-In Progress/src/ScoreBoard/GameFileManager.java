@@ -43,17 +43,13 @@ public enum GameFileManager {
         }
     }
 
-    /**
-     * Checks if the file exists.
-     *
-     * @return true or false.
-     */
+    // Method to check if file exist
     private boolean saveFileExists() {
         File f = new File(filename);
         return f.exists();
     }
 
-
+    // Initialise if the file does not exist
     private void init() {
         gameData = new GameScore();
         gameData.init();

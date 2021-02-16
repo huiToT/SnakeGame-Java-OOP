@@ -1,12 +1,18 @@
 package ScoreBoard;
 
-public class GameScore {
+import java.io.Serializable;
+
+public class GameScore implements Serializable {
+
+    private static final long serialVersionUID = 201809111959L;
+
     private final int MAX_SCORE_BOARD = 10;
     private final PlayerScore[] highScore;
 
     private long tempScore;
 
     GameScore(){
+
         highScore = new PlayerScore[MAX_SCORE_BOARD];
     }
 

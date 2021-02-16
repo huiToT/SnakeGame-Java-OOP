@@ -1,6 +1,10 @@
 package ScoreBoard;
 
-public class PlayerScore {
+import java.io.Serializable;
+
+public class PlayerScore implements Serializable {
+    private static final long serialVersionUID = 201809112000L;
+
     private String name;
     private long score;
 
