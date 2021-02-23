@@ -22,7 +22,7 @@ A snake battle royale player vs player game. Each player will be given 3 lives a
 	- Multiple levels for the game
 
 ### UML Diagram
-<img src ="/UML.png" alt="UML Diagram"/>
+<img src ="/UML Diagram.jpg" alt="UML Diagram"/>
 
 -----------------------------------------------------------
 
