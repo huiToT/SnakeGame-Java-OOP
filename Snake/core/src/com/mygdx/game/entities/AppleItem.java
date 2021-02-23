@@ -3,7 +3,7 @@ package com.mygdx.game.entities;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public class AppleItem extends Items implements entity{
+public class AppleItem extends Items{
 
 
     public AppleItem(float x, float y) {

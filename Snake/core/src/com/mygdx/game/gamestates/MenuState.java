@@ -13,7 +13,7 @@ import com.mygdx.game.managers.FileManager;
 import com.mygdx.game.managers.StateManage;
 import com.mygdx.game.managers.Jukebox;
 
-public class MenuState extends GameState implements menu{
+public class MenuState extends GameState {
 
     private Texture bg;
 
