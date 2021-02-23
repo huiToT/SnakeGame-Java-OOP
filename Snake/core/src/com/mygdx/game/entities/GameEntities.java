@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.mygdx.game.Main;
 
-public abstract class GameEntities {
+public abstract class GameEntities implements Entities{
     //postition
     float x;
     float y;
