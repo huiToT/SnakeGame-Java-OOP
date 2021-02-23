@@ -3,10 +3,9 @@ package com.mygdx.game.entities;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public class AppleItem extends Items {
+public class MuscleItem extends Items{
 
-
-    public AppleItem(float x, float y) {
+    public MuscleItem(float x, float y) {
         super(x, y);
     }
 
@@ -27,13 +26,11 @@ public class AppleItem extends Items {
 
     @Override
     public int getScore() {
-        return 10;
+        return 20;
     }
 
     @Override
     public void draw(SpriteBatch sb, Texture texture) {
         super.draw(sb, texture);
     }
-
 }
-

@@ -440,7 +440,7 @@ public class PlayState extends GameState{
                 Jukebox.MANAGER.play("hiss");
             }
 
-            if (apple.shouldRemove() || muscle.shouldRemove() || p1.isDead() || p2.isDead()){
+            if (apple.shouldRemove() || p1.isDead() || p2.isDead()){
                 apple = null;
             }
             if (muscle.shouldRemove() || p1.isDead() || p2.isDead()){

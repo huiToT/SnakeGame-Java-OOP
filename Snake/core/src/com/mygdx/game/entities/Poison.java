@@ -3,10 +3,8 @@ package com.mygdx.game.entities;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public class AppleItem extends Items {
-
-
-    public AppleItem(float x, float y) {
+public class Poison extends Items {
+    public Poison(float x, float y) {
         super(x, y);
     }
 
@@ -21,19 +19,17 @@ public class AppleItem extends Items {
     }
 
     @Override
-    public void update(float dt) {
-        super.update(dt);
+    public int getScore() {
+        return -10;
     }
 
     @Override
-    public int getScore() {
-        return 10;
+    public void update(float dt) {
+        super.update(dt);
     }
 
     @Override
     public void draw(SpriteBatch sb, Texture texture) {
         super.draw(sb, texture);
     }
-
 }
-

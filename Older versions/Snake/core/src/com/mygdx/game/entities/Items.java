@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
 import com.mygdx.game.gamestates.PlayState;
 
-public class Items extends GameEntities implements entity_interface{
+public class Items extends GameEntities {
 
     private float removeTimer;
     private final float removeTime;
@@ -77,6 +77,3 @@ public class Items extends GameEntities implements entity_interface{
         sb.end();
     }
 }
-
-
-

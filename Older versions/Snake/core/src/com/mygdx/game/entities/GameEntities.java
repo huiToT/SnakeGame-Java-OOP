@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.mygdx.game.Main;
 
-public abstract class GameEntities {
+public abstract class GameEntities implements Entities{
     //postition
     float x;
     float y;
@@ -76,21 +76,4 @@ public abstract class GameEntities {
 
     }
 
-
-
-
-}
-
-interface entity_interface{
-    boolean shouldRemove();
-    int getScore();
-}
-
-interface player_interface{
-    void setUp(boolean a);
-    void setDown(boolean b);
-    void setLeft(boolean c);
-    void setRight(boolean d);
-    void hit();
-    boolean isDead();
 }

@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
-public class Player extends GameEntities implements player_interface{
+public class Player extends GameEntities {
 
     public enum Facing {
         UP, DOWN, LEFT, RIGHT
@@ -323,5 +323,4 @@ public class Player extends GameEntities implements player_interface{
         }
 
     }
-
 }
