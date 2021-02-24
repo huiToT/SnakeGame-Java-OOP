@@ -1,10 +1,8 @@
 package com.mygdx.game.entities;
 
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.mygdx.game.Main;
 
-public abstract class GameEntities {
+public abstract class GameEntities implements Entities{
     //postition
     float x;
     float y;
@@ -52,14 +50,10 @@ public abstract class GameEntities {
         return (getX() == x && getY() == y);
     }
 
-    public abstract void update(float dt);
-
-    public abstract void draw(ShapeRenderer sr);
 
     /**
-     * When ends the game board, jumps to opposite side board.
+     * When the snake go into the border, will warp the snake to appear on the other side.
      */
-
     public void wrap() {
         if (x < 0) {
             x = Main.WIDTH - width;
@@ -76,21 +70,4 @@ public abstract class GameEntities {
 
     }
 
-
-
-
-}
-
-interface entity_interface{
-    boolean shouldRemove();
-    int getScore();
-}
-
-interface player_interface{
-    void setUp(boolean a);
-    void setDown(boolean b);
-    void setLeft(boolean c);
-    void setRight(boolean d);
-    void hit();
-    boolean isDead();
 }

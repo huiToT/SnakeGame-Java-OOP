@@ -55,27 +55,31 @@ public class PlayState extends GameState{
 
     private boolean beat1;
 
-
     public PlayState(StateManage stateManager) {
         super(stateManager);
     }
 
+    /**
+     * Method to return gridCell variable
+     * @return
+     */
     public static float getGrid() {
         return (float) gridCell;
     }
 
     @Override
     public void setup() {
+
         sr = stateManager.renderer;
         sb = stateManager.batch;
         titleFont = stateManager.titleFont;
 
-
+        //Initialise the texture to load the images
         appleTT = new Texture("image/apple.png");
         muscleTT = new Texture("image/muscle.png");
         poisonTT = new Texture("image/poison.png");
 
-        //removed from draw, causes a huge consumption of memory in there
+        //Initialise the color in here to prevent a huge consumption in memory usage in the draw method
         Color color = new Color(0, 1, 1, 1);
         titleFont = Font.MANAGER.set(30, color);
         font = Font.MANAGER.set(15);
@@ -83,6 +87,7 @@ public class PlayState extends GameState{
         tempGameWidth = Main.WIDTH;
         tempGameHeight = Main.HEIGHT;
 
+        //Change the setting of the game board
         Main.WIDTH = col * gridCell;
         Main.HEIGHT = row * gridCell;
 
@@ -100,11 +105,11 @@ public class PlayState extends GameState{
         liveP2 = new ArrayList<>();
 
 
+        //Initialise the player1 and player2 lives
         for (int i = 0; i < p1.getLives(); i++) {
             Player newLive = new Player(15);
             liveP1.add(newLive);
         }
-
         for (int i = 0; i < p2.getLives(); i++) {
             Player newLive = new Player(15);
             liveP2.add(newLive);
@@ -117,7 +122,7 @@ public class PlayState extends GameState{
     }
 
     /**
-     * Resets the snake position considering level start position and orientation.
+     * Resets the snake start position and orientation.
      */
     private void resetBody() {
         p1.resetToPosition(
@@ -237,17 +242,25 @@ public class PlayState extends GameState{
     }
 
     /**
-     * Update p1's lives.
+     * Update player1's lives.
+     * Update player2's lives.
      */
     private void updatesLives() {
         if (p1.isDead() || p2.isDead()) {
             if (p1.getLives() < 0) {
+                if (p2.getScore() > p1.getScore())
+                    stateManager.setWinner(StateManage.Winner.Player2);
+                else
+                    stateManager.setWinner(StateManage.Winner.Player1);
                 FileManager.MANAGER.gameScore.setTempScore((long) p1.getScore() + (long)p2.getScore());
                 stateManager.setWinner(StateManage.Winner.Player2);
                 stateManager.setState(StateManage.State.GAMEOVER);
             }
-            else if (p2.getLives() < 0) {
-                stateManager.setWinner(StateManage.Winner.Player1);
+            if (p2.getLives() < 0) {
+                if (p1.getScore() > p2.getScore())
+                    stateManager.setWinner(StateManage.Winner.Player1);
+                else
+                    stateManager.setWinner(StateManage.Winner.Player2);
                 FileManager.MANAGER.gameScore.setTempScore((long) p1.getScore() + (long)p2.getScore());
                 stateManager.setState(StateManage.State.GAMEOVER);
             }  else {
@@ -259,7 +272,7 @@ public class PlayState extends GameState{
     }
 
     /**
-     * Updates tail parts position.
+     * Updates tail parts position after ate the items.
      */
     private void updateBodyPosition() {
         if (b1.size() != 0) {
@@ -291,9 +304,9 @@ public class PlayState extends GameState{
     }
 
     /**
-     * Creates a new Apple. Check if space is free to create.
+     * Creates a new Apple item. Check if space is free to create.
      *
-     * @return new Apple
+     * @return new AppleItem(x,y)
      */
     private Items newApple() {
         float x;
@@ -325,6 +338,12 @@ public class PlayState extends GameState{
 
         return new AppleItem(x, y);
     }
+
+    /**
+     * Creates a new Muscle item. Check if space is free to create.
+     *
+     * @return new MuscleItem(x, y)
+     */
     private Items newMuscle() {
         float x;
         float y;
@@ -356,6 +375,11 @@ public class PlayState extends GameState{
         return new MuscleItem(x, y);
     }
 
+    /**
+     * Creates a new Poison item. Check if space is free to create.
+     *
+     * @return new PoisonItem(x, y)
+     */
     private Items newPoison() {
         float x;
         float y;
@@ -388,7 +412,7 @@ public class PlayState extends GameState{
     }
 
     /**
-     * Check collision point to point intersection
+     * Check all of the possible collision point to point intersection
      */
     private void checkCollision() {
         if (p1.contains(p2.getX(), p2.getY())){
@@ -417,7 +441,7 @@ public class PlayState extends GameState{
         }
 
 
-        //p1 to apple
+        //p1 and p2 to items
         if (apple != null && muscle != null) {
             if (p1.eat(apple.contains(p1.getX(), p1.getY()), apple.getScore()) ||
                     p1.eat(muscle.contains(p1.getX(), p1.getY()), muscle.getScore()) ||
@@ -440,7 +464,7 @@ public class PlayState extends GameState{
                 Jukebox.MANAGER.play("hiss");
             }
 
-            if (apple.shouldRemove() || muscle.shouldRemove() || p1.isDead() || p2.isDead()){
+            if (apple.shouldRemove() || p1.isDead() || p2.isDead()){
                 apple = null;
             }
             if (muscle.shouldRemove() || p1.isDead() || p2.isDead()){
@@ -458,7 +482,7 @@ public class PlayState extends GameState{
 
 
     /**
-     * Updates the extra lives to the display
+     * Updates the remaining lives to the display for both p1 and p2
      */
     private void updateExtraLives() {
         if (p1.isDead() && liveP1.size() > 0) {
@@ -604,7 +628,7 @@ public class PlayState extends GameState{
     @Override
     public void inputKeyHandle() {
         if (isPlayTime()) {
-            //user preferences input keys
+            //user keys input for player1 and player2
             p1.setLeft(Gdx.input.isKeyJustPressed(Input.Keys.LEFT));
             p1.setRight(Gdx.input.isKeyJustPressed(Input.Keys.RIGHT));
             p1.setUp(Gdx.input.isKeyJustPressed(Input.Keys.UP));
@@ -619,8 +643,8 @@ public class PlayState extends GameState{
         if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)) {
             playTime = !playTime;
         }
-        if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE) && playTime) {
-            playTime = false;
+        if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE)) {
+            playTime = !playTime;
             exitMessage = !exitMessage;
         }
         if (exitMessage && Gdx.input.isKeyJustPressed(Input.Keys.Y))
@@ -628,12 +652,10 @@ public class PlayState extends GameState{
 
     }
 
-    public int getGridCell() {
-        return gridCell;
-    }
 
     @Override
     public void dispose() {
+        //reset the original WIDTH and HEIGHT of the screen
         Main.WIDTH = tempGameWidth;
         Main.HEIGHT = tempGameHeight;
         Main.setCameraPosition();

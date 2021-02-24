@@ -12,11 +12,16 @@ public class StateManage {
     private GameState gameState;
     private Winner player;
 
-    // Set of different state of the snake game
+    /**
+     * List of state variable
+     */
     public enum State {
         MENU, PLAY, HIGHSCORES, CREDIT, GAMEOVER
     }
 
+    /**
+     * set of players
+     */
     public enum Winner {
         Player1, Player2
     }
@@ -28,12 +33,19 @@ public class StateManage {
     public final BitmapFont titleFont = new BitmapFont();
     public final BitmapFont font = new BitmapFont();
 
-
+    /**
+     * Constructor StateManage
+     */
     public StateManage() {
         setState(State.MENU);
     }
 
     // set the current state of the game
+
+    /**
+     * Method to set the state of the game
+     * @param state - Constants variable state of the game (MENU, PLAY, HIGHSCORES, CREDIT, GAMEOVER)
+     */
     public void setState(State state) {
         if (gameState != null) {
             gameState.dispose();
@@ -57,7 +69,7 @@ public class StateManage {
                 break;
             case CREDIT:
                 Main.setCameraPosition();
-//                gameState = new OptionsState(this);
+                gameState = new CreditState(this);
 
                 break;
             case GAMEOVER:
@@ -67,29 +79,42 @@ public class StateManage {
         }
     }
 
-    // set the current state of the game
+    /**
+     * Method to set the player variable to be either Player1 or Player2
+     * @param winner
+     */
     public void setWinner(Winner winner) {
             this.player = winner;
 
     }
 
+    /**
+     * Method to return player variable
+     * @return
+     */
     public Winner getWinner(){
         return this.player;
     }
 
-    public static boolean getIsNewGame() {
-        return newGame;
-    }
-
+    /**
+     * Toggle to set new start new game
+     */
     public static void setNewGame() {
         newGame=!newGame;
     }
 
+    /**
+     * Method to update the game
+     * @param time
+     */
     public void update(float time) {
         gameState.update(time);
 
     }
 
+    /**
+     * Method to draw the render/draw the graphic of the game
+     */
     public void draw() {
         gameState.paint();
 

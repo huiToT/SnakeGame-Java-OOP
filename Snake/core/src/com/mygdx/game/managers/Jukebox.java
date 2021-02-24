@@ -18,6 +18,11 @@ public enum Jukebox {
         sounds = new HashMap<>();
     }
 
+    /**
+     * Load the audio to use in the game
+     * @param path
+     * @param name
+     */
     public void load(String path, String name) {
         Sound sound = Gdx.audio.newSound(Gdx.files.internal(path));
         sounds.put(name, sound);
@@ -28,7 +33,7 @@ public enum Jukebox {
     }
 
     /**
-     * Plays a sound width volume control.
+     * Plays a sound with volume control.
      *
      * @param name   name of the referenced sound file.
      * @param volume volume of sound.
@@ -37,17 +42,4 @@ public enum Jukebox {
         sounds.get(name).play(volume);
     }
 
-    public void loop(String name) {
-        sounds.get(name).loop();
-    }
-
-    public void stop(String name) {
-        sounds.get(name).stop();
-    }
-
-    public void stopAll() {
-        for (Sound s : sounds.values()) {
-            s.stop();
-        }
-    }
 }

@@ -2,9 +2,13 @@ package com.mygdx.game.gamestates;
 
 import com.mygdx.game.managers.StateManage;
 
-public abstract class GameState {
+public abstract class GameState implements States{
     final StateManage stateManager;
 
+    /**
+     * Constructor to set the state of the game
+     * @param stateManager
+     */
     GameState(StateManage stateManager) {
         this.stateManager = stateManager;
         setup();
@@ -12,13 +16,4 @@ public abstract class GameState {
 
     protected abstract void setup();
 
-    public abstract void update(float time);
-
-    public abstract void paint();
-
-    public abstract void inputKeyHandle();
-
-    public abstract void dispose();
-
 }
-

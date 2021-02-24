@@ -3,7 +3,7 @@ package com.mygdx.game.entities;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public class PoisonItem extends Items {
+public class PoisonItem extends Items{
     public PoisonItem(float x, float y) {
         super(x, y);
     }

@@ -65,7 +65,8 @@ public class ScoreBoardState extends GameState {
 
     @Override
     public void dispose() {
-        //dispose of objects is manipulated by the Game class
+
     }
+
 
 }

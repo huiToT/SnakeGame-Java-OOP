@@ -33,16 +33,11 @@ public class GameOverState extends GameState {
     public void setup() {
         sB = stateManager.batch;
         sR = stateManager.renderer;
-//        Main.WIDTH = 20 * 15;
-//        Main.HEIGHT = 20 * 15;
-//
-//        Main.orgCamera.position.set(Main.WIDTH / 2, Main.HEIGHT / 2, 0);
-//        Main.orgCamera.update();
 
         highScore = FileManager.MANAGER.gameScore.checkHighScore(FileManager.MANAGER.gameScore.getTempScore());
 
         if (highScore) {
-            name = new char[]{'A', 'A', 'A'};
+            name = new char[]{'A', 'A', 'A', 'A'};
             currChar = 0;
         }
         fntGameOver = Font.MANAGER.set(32);
@@ -70,7 +65,7 @@ public class GameOverState extends GameState {
         Font.MANAGER.centered(sB, fnt, str, Main.WIDTH / 2, 200);
 
         GlyphLayout layout = new GlyphLayout();
-        layout.setText(fnt, "AAA");
+        layout.setText(fnt, "AAAA");
 
         sB.begin();
         for (int i = 0; i < name.length; i++) {
@@ -80,13 +75,6 @@ public class GameOverState extends GameState {
         }
         sB.end();
 
-//        sR.begin(ShapeType.Line);
-//        sR.line(
-//                Main.WIDTH / 2 - layout.width / 2 + 14 * currChar,
-//                125,
-//                Main.WIDTH / 2 - layout.width / 2 + 10 + 14 * currChar,
-//                125);
-//        sR.end();
 
     }
 
@@ -101,7 +89,7 @@ public class GameOverState extends GameState {
             stateManager.setState(StateManage.State.MENU);
         }
 
-        // prevents accessing keys if isn't new highscore
+        // prevents accessing keys if isn't new high score
         if (highScore) {
 
             if (Gdx.input.isKeyJustPressed(Keys.UP)) {
@@ -139,8 +127,6 @@ public class GameOverState extends GameState {
 
     @Override
     public void dispose() {
-
-        //dispose of objects is manipulated by the Game class
     }
 
 }

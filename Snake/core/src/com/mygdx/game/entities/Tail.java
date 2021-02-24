@@ -1,8 +1,5 @@
 package com.mygdx.game.entities;
 
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.mygdx.game.gamestates.PlayState;
 
@@ -21,6 +18,10 @@ public class Tail extends GameEntities {
 
     }
 
+    /**
+     * Method to draw player 1
+     * @param sr
+     */
     @Override
     public void draw(ShapeRenderer sr) {
 
@@ -34,6 +35,12 @@ public class Tail extends GameEntities {
         sr.end();
 
     }
+
+    /**
+     * Method to draw player 2
+     * @param sr
+     * @param isP2
+     */
     public void draw(ShapeRenderer sr, boolean isP2) {
         if (isP2) {
             sr.setColor(0.25f, 0, 0, 1);

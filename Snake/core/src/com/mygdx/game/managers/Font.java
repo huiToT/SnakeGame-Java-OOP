@@ -22,7 +22,7 @@ public enum Font {
     final FreeTypeFontGenerator.FreeTypeFontParameter fontParameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
     // set font
     private final FreeTypeFontGenerator fontGenerator = new FreeTypeFontGenerator(
-            Gdx.files.internal("fonts/Hyperspace Bold.ttf"));
+            Gdx.files.internal("fonts/Prototype.ttf"));
     private final GlyphLayout layout = new GlyphLayout();
 
     /**

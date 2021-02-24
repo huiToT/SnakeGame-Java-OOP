@@ -11,10 +11,10 @@ public enum FileManager {
     MANAGER;
 
     public GameScore gameScore;
-    private final String filename = "highscores.dat";
+    private final String filename = "scores.dat";
 
     /**
-     * Saves a file with game high scores.
+     * Saves a file with top 10 highest scores.
      */
     public void save() {
         try {
@@ -30,7 +30,7 @@ public enum FileManager {
     }
 
     /**
-     * Loads file width saved high scores.
+     * Loads high score file from the scores.dat.
      */
     public void load() {
         try {

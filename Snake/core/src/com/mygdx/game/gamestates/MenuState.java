@@ -13,7 +13,7 @@ import com.mygdx.game.managers.FileManager;
 import com.mygdx.game.managers.StateManage;
 import com.mygdx.game.managers.Jukebox;
 
-public class MenuState extends GameState{
+public class MenuState extends GameState {
 
     private Texture bg;
 
@@ -99,7 +99,6 @@ public class MenuState extends GameState{
 
     @Override
     public void dispose() {
-        //dispose of objects is manipulated by the Game class
     }
 
     /**

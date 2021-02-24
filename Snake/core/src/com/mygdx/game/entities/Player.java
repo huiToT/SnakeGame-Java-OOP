@@ -1,11 +1,8 @@
 package com.mygdx.game.entities;
 
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
-public class Player extends GameEntities implements player_interface{
+public class Player extends GameEntities {
 
     public enum Facing {
         UP, DOWN, LEFT, RIGHT
@@ -111,7 +108,7 @@ public class Player extends GameEntities implements player_interface{
     }
 
     /**
-     * Handles Left key, if facing fruitToNextLevel, rotates left, if facing down, rotates right.
+     * Handles Left key, if facing up, rotates left, if facing down, rotates right.
      *
      * @param b - true or false.
      */
@@ -129,7 +126,7 @@ public class Player extends GameEntities implements player_interface{
     }
 
     /**
-     * Handles Right key, if facing fruitToNextLevel, rotates left, if facing down, rotates right.
+     * Handles Right key, if facing up, rotates right, if facing down, rotates right.
      *
      * @param b - true or false.
      */
@@ -165,7 +162,7 @@ public class Player extends GameEntities implements player_interface{
 
 
     /**
-     * Handles Up key, if facing left, rotates left, if facing right, rotates right.
+     * Handles Up key, if facing left, rotates down, if facing right, rotates down.
      *
      * @param b - true or false.
      */
@@ -183,7 +180,7 @@ public class Player extends GameEntities implements player_interface{
     }
 
     /**
-     * Set player dead
+     * Set player dead and decrement the lives by 1
      */
     public void hit() {
         dead = !dead;
@@ -200,7 +197,7 @@ public class Player extends GameEntities implements player_interface{
     }
 
     /**
-     * If true the player sums score
+     * Method to check if the item was consumed, if true then add the score
      *
      * @param b     true or false
      * @param score int score
@@ -280,7 +277,7 @@ public class Player extends GameEntities implements player_interface{
 
 
     /**
-     * Draws the shape.
+     * Draws player 1 head.
      *
      * @param sr - ShapeRenderer
      */
@@ -304,6 +301,11 @@ public class Player extends GameEntities implements player_interface{
 
     }
 
+    /**
+     * Draw player 2 head
+     * @param sr
+     * @param isP2
+     */
     public void draw(ShapeRenderer sr, Boolean isP2) {
         if (isP2) {
             sr.setColor(0.15f, 0, 0, 1);
@@ -323,5 +325,4 @@ public class Player extends GameEntities implements player_interface{
         }
 
     }
-
 }
